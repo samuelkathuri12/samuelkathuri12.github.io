@@ -385,5 +385,325 @@
       <p><strong>Service Coverage:</strong> Walk-in &amp; 100% Online Digital Services | Countrywide Tech Delivery</p>
     </div>
   </div>
-</section> 
+</section> <!-- ABOUT, CONTACT & FOOTER STYLES -->
+<style>
+  .sn-section {
+    padding: 70px 20px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #1e293b;
+  }
+  .sn-bg-light {
+    background-color: #f8fafc;
+  }
+  .sn-bg-white {
+    background-color: #ffffff;
+  }
+  .sn-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .sn-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 50px auto;
+  }
+  .sn-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 12px;
+  }
+  .sn-header p {
+    font-size: 1.1rem;
+    color: #475569;
+    margin: 0;
+  }
+  .sn-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    align-items: start;
+  }
+  .sn-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+  }
+  .sn-card h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-top: 0;
+    margin-bottom: 18px;
+  }
+  .sn-about-text p {
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: #334155;
+    font-size: 1rem;
+  }
+  .sn-location-banner {
+    margin-top: 24px;
+    padding: 16px 20px;
+    background-color: #eff6ff;
+    border-left: 4px solid #2563eb;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    color: #1e3a8a;
+  }
+  .sn-benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .sn-benefits-list li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 16px;
+    color: #334155;
+  }
+  .sn-benefits-list li:last-child {
+    margin-bottom: 0;
+  }
+  .sn-benefits-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #16a34a;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  .sn-contact-item {
+    margin-bottom: 16px;
+    font-size: 1rem;
+    color: #334155;
+  }
+  .sn-contact-item strong {
+    display: block;
+    color: #0f172a;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 2px;
+  }
+  .sn-contact-item a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .sn-contact-item a:hover {
+    text-decoration: underline;
+  }
+  .sn-btn-whatsapp {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #16a34a;
+    color: #ffffff !important;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 14px 20px;
+    border-radius: 8px;
+    text-decoration: none !important;
+    margin-top: 12px;
+    transition: background-color 0.2s ease;
+  }
+  .sn-btn-whatsapp:hover {
+    background-color: #15803d;
+  }
+  .sn-form-group {
+    margin-bottom: 16px;
+  }
+  .sn-form-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #0f172a;
+    margin-bottom: 6px;
+  }
+  .sn-form-group input,
+  .sn-form-group select,
+  .sn-form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: #0f172a;
+    background-color: #f8fafc;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+  }
+  .sn-form-group input:focus,
+  .sn-form-group select:focus,
+  .sn-form-group textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    background-color: #ffffff;
+  }
+  .sn-btn-submit {
+    width: 100%;
+    padding: 14px 20px;
+    background-color: #0f172a;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  .sn-btn-submit:hover {
+    background-color: #1e293b;
+  }
+  .sn-footer {
+    background-color: #0f172a;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 32px 20px;
+    font-size: 0.95rem;
+  }
+  .sn-footer p {
+    margin: 6px 0;
+  }
+  .sn-footer a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .sn-footer a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="sn-section sn-bg-light">
+  <div class="sn-container">
+    <div class="sn-header">
+      <h2>About Samtech Nexus Limited</h2>
+      <p>Bridging Digital Solutions, Essential Services &amp; Modern Tech</p>
+    </div>
+
+    <div class="sn-grid-2">
+      <!-- Left Column: Story & Location -->
+      <div class="sn-card sn-about-text">
+        <h3>Who We Are</h3>
+        <p>Founded by Samuel Kathuri, <strong>Samtech Nexus Limited</strong> is a client-focused digital agency and tech hub built to simplify your personal, academic, and business needs.</p>
+        <p>Whether you are launching a brand, applying for vital travel and government documents, or upgrading your daily gadgets, we deliver reliable results under one roof. We handle sensitive tasks like KRA iTax compliance, passport bookings, and visa applications with strict confidentiality—while providing standout graphic design, modern websites, and genuine electronics.</p>
+        
+        <div class="sn-location-banner">
+          <strong>📍 Office &amp; Coverage:</strong> Visit us at <strong>Meru House, Room 108 (Nairobi)</strong> or access all our digital services <strong>100% online</strong>. We offer fast, secure <strong>countrywide delivery</strong> on all smartphones, laptops, and accessories.
+        </div>
+      </div>
+
+      <!-- Right Column: Why Choose Us -->
+      <div class="sn-card">
+        <h3>Why Choose Samtech Nexus?</h3>
+        <ul class="sn-benefits-list">
+          <li><strong>Walk-In &amp; Online Convenience:</strong> Visit our Nairobi office in person or get served remotely from anywhere in Kenya.</li>
+          <li><strong>Countrywide Tech Delivery:</strong> Order genuine smartphones, laptops, smartwatches, and audio gear delivered straight to your doorstep.</li>
+          <li><strong>Strict Confidentiality &amp; Accuracy:</strong> Your personal details, KRA credentials, and travel documents are handled with maximum privacy and precision.</li>
+          <li><strong>Fast Turnaround:</strong> From urgent flyers and CVs to online applications, we work promptly so you never miss a deadline.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="sn-section sn-bg-white">
+  <div class="sn-container">
+    <div class="sn-header">
+      <h2>Contact Us</h2>
+      <p>Have a project in mind, need an online application done, or want to order a gadget? Reach out today.</p>
+    </div>
+
+    <div class="sn-grid-2">
+      <!-- Left Column: Direct Contact Info -->
+      <div class="sn-card">
+        <h3>Get in Touch</h3>
+
+        <div class="sn-contact-item">
+          <strong>Physical Office</strong>
+          Meru House, Room 108, Nairobi, Kenya
+        </div>
+
+        <div class="sn-contact-item">
+          <strong>Service Mode &amp; Delivery</strong>
+          Walk-in &amp; Online Services | Countrywide Tech Delivery
+        </div>
+
+        <div class="sn-contact-item">
+          <strong>Phone &amp; WhatsApp</strong>
+          <a href="tel:+254793963298">0793 963 298</a>
+        </div>
+
+        <div class="sn-contact-item">
+          <strong>Email Address</strong>
+          <a href="mailto:infosamtech@gmail.com">infosamtech@gmail.com</a>
+        </div>
+
+        <div class="sn-contact-item">
+          <strong>Working Hours</strong>
+          Monday – Saturday: 8:00 AM – 6:00 PM
+        </div>
+
+        <a href="https://wa.me." 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="sn-btn-whatsapp">
+          Chat With Us on WhatsApp
+        </a>
+      </div>
+
+      <!-- Right Column: Quick Inquiry Form -->
+      <div class="sn-card">
+        <h3>Send a Quick Inquiry</h3>
+        <form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
+          <div class="sn-form-group">
+            <label for="clientName">Your Name</label>
+            <input type="text" id="clientName" placeholder="e.g., John Kamau" required>
+          </div>
+
+          <div class="sn-form-group">
+            <label for="serviceType">Service or Product Needed</label>
+            <select id="serviceType" required>
+              <option value="">-- Select an Option --</option>
+              <option value="Graphic Design (Flyer / Poster / Cards)">Graphic Design (Flyer / Poster / Cards)</option>
+              <option value="Website or Portfolio Creation">Website or Portfolio Creation</option>
+              <option value="Government & Travel (KRA, Passport, Visa, Green Card)">KRA, Passport, Visa, or Green Card</option>
+              <option value="CV / Resume Writing & Editing">CV / Resume Writing &amp; Editing</option>
+              <option value="Smartphones, Laptops & Accessories">Smartphones, Laptops &amp; Accessories</option>
+            </select>
+          </div>
+
+          <div class="sn-form-group">
+            <label for="clientMessage">Message / Order Details</label>
+            <textarea id="clientMessage" rows="4" placeholder="Tell us what you need or your delivery location..." required></textarea>
+          </div>
+
+          <button type="submit" class="sn-btn-submit">Send Inquiry via WhatsApp</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="sn-footer">
+  <div class="sn-container">
+    <p><strong>Samtech Nexus Limited</strong> &mdash; Meru House, Room 108, Nairobi, Kenya</p>
+    <p>Phone / WhatsApp: <a href="tel:+254793963298">0793 963 298</a> | Email: <a href="mailto:infosamtech@gmail.com">infosamtech@gmail.com</a></p>
+    <p>&copy; 2026 Samtech Nexus Limited. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP FORM SCRIPT -->
+<script>
+
 
