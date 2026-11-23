@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samtech Nexus Limited | Digital Services & Tech Accessories</title>
+  <style>
+    :root {
+      --navy: #0a192f;
+      --navy-light: #112240;
+      --gold: #d4af37;
+      --gold-hover: #f0c744;
+      --text-light: #f8f9fa;
+      --text-muted: #cbd5e1;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--navy);
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* Header & Navigation */
+    header {
+      background-color: var(--navy-light);
+      border-bottom: 2px solid var(--gold);
+      padding: 1rem 5%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--gold);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 5rem 5% 4rem;
+      background: linear-gradient(135deg, #060f1e 0%, #112240 100%);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      font-size: 1.15rem;
+      color: var(--text-muted);
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--gold);
+      color: var(--navy);
+      padding: 0.85rem 1.8rem;
+      border-radius: 6px;
+      font-weight: 700;
+      text-decoration: none;
+      margin: 0.4rem;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .btn:hover {
+      background-color: var(--gold-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--gold);
+      border: 2px solid var(--gold);
+    }
+
+    .btn-outline:hover {
+      background-color: var(--gold);
+      color: var(--navy);
+    }
+
+    /* Section Containers */
+    section {
+      padding: 4rem 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+    }
+
+    /* Grids & Cards */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: var(--navy-light);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: transform 0.2s, border-color 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold);
+    }
+
+    .card-number {
+      display: inline-block;
+      background-color: var(--gold);
+      color: var(--navy);
+      font-weight: 800;
+      padding: 0.2rem 0.65rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .card h3 {
+      color: var(--white);
+      font-size: 1.15rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Founder Banner */
+    .founder-box {
+      background-color: var(--navy-light);
+      border-left: 5px solid var(--gold);
+      padding: 2rem;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .founder-box h3 {
+      color: var(--gold);
+      font-size: 1.4rem;
+    }
+
+    /* Contact & Footer */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      text-align: center;
+    }
+
+    .contact-card {
+      background-color: var(--navy-light);
+      padding: 1.8rem;
+      border-radius: 8px;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+    }
+
+    .contact-card h4 {
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .contact-card a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-card a:hover {
+      color: var(--gold);
+    }
+
+    footer {
+      background-color: #060f1e;
+      text-align: center;
+      padding: 2rem 5%;
+      border-top: 1px solid rgba(212, 175, 55, 0.3);
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .socials {
+      margin-bottom: 1rem;
+      font-weight: 600;
+      color: var(--gold);
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2rem; }
+      nav { margin-top: 0.75rem; }
+      nav a { margin-left: 0; margin-right: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="logo">Samtech Nexus Limited</div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#accessories">Accessories</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>SAMTECH NEXUS LIMITED</h1>
+    <p>Your trusted hub for graphic design, online government &amp; travel applications, web development, and modern smart devices.</p>
+    <a href="https://wa.me." target="_blank" class="btn">Chat on WhatsApp</a>
+    <a href="#services" class="btn btn-outline">Explore Services</a>
+  </div>
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-subtitle">Fast, reliable digital design, documentation, and web solutions</p>
+    <div class="grid">
+      <div class="card">
+        <span class="card-number">01</span>
+        <h3>Flyer Designing</h3>
+        <p>Eye-catching promotional flyers tailored for businesses, events, and campaigns.</p>
+      </div>
+      <div class="card">
+        <span class="card-number">02</span>
+        <h3>Poster Designing</h3>
+        <p>High-resolution digital and print-ready posters that capture attention.</p>
+      </div>
+      <div class="card">
+        <span class="card-number">03</span>
+        <h3>Invitation Cards</h3>
+        <p>Custom digital and printable invitations for weddings, graduations, and corporate events.</p>
+      </div>
+      <div class="card">
+        <span class="card-number">04</span>
+        <h3>Business Cards</h3>
+        <p>Professional, modern business card designs to elevate your brand identity.</p>
+      </div>
+      <div class="card">
+        <span class="card-number">05</span>
+        <h3>Green Card Application</h3>
+        <p>Guided, accurate assistance with your Diversity Visa (Green Card) entry.</p>
+      </div>
+      <div class="card">
+        <span class="card-number">06</span>
+        <h3>Passport Application</h3>
+        <p>Hassle-free online passport application booking and documentation support.</p>
+      </div>
+      <div class="card">
+        <span class="card-number">07</span>
+        <h3>Visa Application</h3>
+        <p>Step-by-step online visa form processing and document preparation.</p>
+      </div>
+      <div class="card">
+        <span class="card-number">08</span>
+        <h3>KRA PIN Services</h3>
+        <p>Quick KRA PIN registration, retrieval, and iTax profile updates.</p>
+      </div>
+      <div class="card">
+        <span class="card-number">09</span>
+        <h3>Portfolio Creation</h3>
+        <p>Standout personal and creative portfolios to showcase your skills and projects.</p>
+      </div>
+      <div class="card">
+        <span class="card-number">10</span>
+        <h3>Resume / CV Writing</h3>
+        <p>Clean, modern resumes structured to help you land job interviews.</p>
+      </div>
+      <div class="card">
+        <span class="card-number">11</span>
+        <h3>Editing Services</h3>
+        <p>Professional document, photo, and digital content editing.</p>
+      </div>
+      <div class="card">
+        <span class="card-number">12</span>
+        <h3>Website Developing</h3>
+        <p>Responsive, custom websites built for businesses, startups, and individuals.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accessories Section -->
+  <section id="accessories">
+    <h2 class="section-title">Tech &amp; Accessories</h2>
+    <p class="section-subtitle">Quality gadgets and electronics available for order</p>
+    <div class="grid">
+      <div class="card">
+        <span class="card-number">01</span>
+        <h3>New Model Smartphones</h3>
+        <p>Latest smartphone models with reliable performance and sleek designs.</p>
+      </div>
+      <div class="card">
+        <span class="card-number">02</span>
+        <h3>Laptops</h3>
+        <p>Dependable laptops for business, school, graphic design, and everyday work.</p>
+      </div>
+      <div class="card">
+        <span class="card-number">03</span>
+        <h3>Smart Watches</h3>
+        <p>Modern smartwatches for fitness tracking, notifications, and daily style.</p>
+      </div>
+      <div class="card">
+        <span class="card-number">04</span>
+        <h3>Earpods &amp; Ear Pads</h3>
+        <p>Wireless earpods and comfortable headphones for clear audio on the go.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Founder Section -->
+  <section id="about">
+    <div class="founder-box">
+      <h3>About Samtech Nexus Limited</h3>
