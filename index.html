@@ -3,22 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Samtech Nexus Limited | Design, Online Services, Web & Tech Hub Nairobi</title>
+  <title>Samtech Nexus Limited</title>
   <style>
     :root {
-      --navy-dark: #060f20;
-      --navy-main: #0b1933;
-      --navy-card: #112344;
-      --navy-hover: #162c54;
+      --bg-dark: #071124;
+      --bg-card: #0f2040;
       --gold: #d4af37;
-      --gold-light: #f3d266;
       --text-light: #f8fafc;
       --text-muted: #cbd5e1;
       --whatsapp: #25d366;
-      --whatsapp-dark: #1ebe5d;
-      --mpesa: #43b02a;
-      --paypal: #0070ba;
-      --border-subtle: rgba(212, 175, 55, 0.25);
     }
 
     * {
@@ -33,50 +26,38 @@
 
     body {
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--navy-dark);
+      background-color: var(--bg-dark);
       color: var(--text-light);
       line-height: 1.6;
     }
 
-    /* Navigation Bar */
+    /* Header / Navbar */
     header {
-      background-color: rgba(6, 15, 32, 0.96);
-      border-bottom: 1px solid var(--border-subtle);
+      background-color: #050c1a;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+      padding: 1rem 2rem;
       position: sticky;
       top: 0;
-      z-index: 1000;
-      padding: 15px 20px;
-    }
-
-    .nav-container {
-      max-width: 1180px;
-      margin: 0 auto;
+      z-index: 100;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 1rem;
     }
 
-    .brand {
-      font-size: 1.25rem;
+    .logo {
+      font-size: 1.2rem;
       font-weight: 800;
       color: var(--gold);
       text-decoration: none;
-      letter-spacing: 0.6px;
-    }
-
-    nav {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
     }
 
     nav a {
       color: var(--text-light);
       text-decoration: none;
+      margin-left: 1.5rem;
       font-size: 0.95rem;
-      font-weight: 500;
     }
 
     nav a:hover {
@@ -85,389 +66,297 @@
 
     /* Hero Section */
     .hero {
-      background: radial-gradient(circle at top center, #162e5c 0%, var(--navy-dark) 75%);
       text-align: center;
-      padding: 90px 20px;
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .hero-badge {
-      display: inline-block;
-      background: rgba(212, 175, 55, 0.14);
-      border: 1px solid var(--gold);
-      color: var(--gold-light);
-      font-size: 0.85rem;
-      font-weight: 600;
-      padding: 6px 16px;
-      border-radius: 999px;
-      margin-bottom: 20px;
+      padding: 5rem 1.5rem;
+      background: linear-gradient(180deg, #0c1d3d 0%, var(--bg-dark) 100%);
     }
 
     .hero h1 {
-      font-size: clamp(2.1rem, 4.5vw, 3.2rem);
+      font-size: 2.6rem;
       color: var(--gold);
       margin-bottom: 1rem;
       letter-spacing: 1px;
-      font-weight: 800;
     }
 
     .hero p {
-      max-width: 720px;
-      margin: 0 auto 2.2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
       font-size: 1.15rem;
       color: var(--text-muted);
     }
 
-    .hero-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
     .btn {
       display: inline-block;
-      padding: 14px 28px;
-      border-radius: 8px;
+      padding: 0.85rem 1.75rem;
+      border-radius: 6px;
       font-weight: 700;
-      font-size: 1rem;
       text-decoration: none;
-      cursor: pointer;
-    }
-
-    .btn-wa {
+      margin: 0.4rem;
       background-color: var(--whatsapp);
-      color: #042912;
-    }
-
-    .btn-wa:hover {
-      background-color: var(--whatsapp-dark);
+      color: #052e16;
     }
 
     .btn-outline {
+      background-color: transparent;
       border: 2px solid var(--gold);
       color: var(--gold);
-      background: transparent;
     }
 
-    .btn-outline:hover {
-      background: rgba(212, 175, 55, 0.12);
-    }
-
-    /* Sections & Containers */
+    /* Sections */
     section {
-      padding: 75px 20px;
-    }
-
-    .alt-bg {
-      background-color: var(--navy-main);
-    }
-
-    .container {
-      max-width: 1180px;
+      max-width: 1100px;
       margin: 0 auto;
+      padding: 4rem 1.5rem;
     }
 
-    .section-title {
+    .section-header {
       text-align: center;
-      margin-bottom: 48px;
+      margin-bottom: 3rem;
     }
 
-    .section-title h2 {
-      font-size: 2.1rem;
+    .section-header h2 {
+      font-size: 2rem;
       color: var(--gold);
-      margin-bottom: 10px;
+      margin-bottom: 0.5rem;
     }
 
-    .section-title p {
+    .section-header p {
       color: var(--text-muted);
-      font-size: 1.05rem;
-      max-width: 700px;
-      margin: 0 auto;
     }
 
-    /* Grids & Cards */
-    .grid-3 {
+    /* Grid & Cards */
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 24px;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
-      align-items: start;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
     }
 
     .card {
-      background-color: var(--navy-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: 12px;
-      padding: 26px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      background-color: var(--bg-card);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      border-radius: 10px;
+      padding: 1.75rem;
     }
 
-    .card:hover {
-      border-color: var(--gold);
-      background-color: var(--navy-hover);
-    }
-
-    .card-num {
-      font-size: 0.82rem;
+    .card span {
+      display: block;
+      font-size: 0.9rem;
       font-weight: 800;
       color: var(--gold);
-      letter-spacing: 1px;
-      margin-bottom: 6px;
-      text-transform: uppercase;
+      margin-bottom: 0.5rem;
     }
 
     .card h3 {
       font-size: 1.25rem;
-      color: #ffffff;
-      margin-bottom: 10px;
+      margin-bottom: 0.75rem;
     }
 
     .card p {
       color: var(--text-muted);
       font-size: 0.95rem;
-      margin-bottom: 18px;
-      flex-grow: 1;
     }
 
-    .price-tag {
-      display: inline-block;
-      background: rgba(212, 175, 55, 0.14);
-      color: var(--gold-light);
-      font-weight: 700;
-      font-size: 0.95rem;
-      padding: 6px 12px;
-      border-radius: 6px;
-      margin-bottom: 14px;
-      border: 1px solid rgba(212, 175, 55, 0.35);
-    }
-
-    .card-btn {
-      display: block;
-      text-align: center;
-      background-color: rgba(37, 211, 102, 0.14);
-      border: 1px solid var(--whatsapp);
-      color: var(--whatsapp);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.92rem;
-      padding: 10px 14px;
-      border-radius: 6px;
-    }
-
-    .card-btn:hover {
-      background-color: var(--whatsapp);
-      color: #042912;
-    }
-
-    /* Payment Section Styling */
-    .payment-badge {
-      display: inline-block;
-      padding: 4px 12px;
-      border-radius: 4px;
-      font-size: 0.8rem;
-      font-weight: 800;
-      letter-spacing: 0.5px;
-      margin-bottom: 12px;
-      text-transform: uppercase;
-    }
-
-    .badge-mpesa {
-      background-color: rgba(67, 176, 42, 0.2);
-      color: #7ce863;
-      border: 1px solid var(--mpesa);
-    }
-
-    .badge-bank {
-      background-color: rgba(212, 175, 55, 0.2);
-      color: var(--gold-light);
-      border: 1px solid var(--gold);
-    }
-
-    .badge-paypal {
-      background-color: rgba(0, 112, 186, 0.25);
-      color: #66b8ff;
-      border: 1px solid var(--paypal);
-    }
-
-    .pay-detail-box {
-      background-color: var(--navy-dark);
-      border: 1px solid var(--border-subtle);
-      border-radius: 8px;
-      padding: 14px;
-      margin-bottom: 16px;
-      font-size: 0.95rem;
-    }
-
-    .pay-detail-box div {
-      margin-bottom: 6px;
-    }
-
-    .pay-detail-box div:last-child {
-      margin-bottom: 0;
-    }
-
-    .pay-detail-box span {
-      color: var(--gold-light);
-      font-weight: 700;
-    }
-
-    .btn-copy {
-      width: 100%;
-      padding: 10px 14px;
-      background-color: transparent;
-      border: 1px solid var(--gold);
-      color: var(--gold);
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 0.92rem;
-      cursor: pointer;
-    }
-
-    .btn-copy:hover {
-      background-color: var(--gold);
-      color: var(--navy-dark);
-    }
-
-    .btn-paypal {
-      display: block;
-      text-align: center;
-      background-color: var(--paypal);
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.92rem;
-      padding: 11px 14px;
-      border-radius: 6px;
-    }
-
-    .payment-confirm-bar {
-      margin-top: 32px;
-      background-color: var(--navy-card);
-      border: 1px solid var(--gold);
-      border-radius: 12px;
-      padding: 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    /* About & Location Box */
-    .location-highlight {
-      margin-top: 20px;
-      padding: 16px;
-      background-color: rgba(212, 175, 55, 0.1);
-      border-left: 4px solid var(--gold);
-      border-radius: 6px;
-      font-size: 0.95rem;
-      color: var(--text-light);
-    }
-
-    .benefits-list {
-      list-style: none;
-    }
-
-    .benefits-list li {
-      position: relative;
-      padding-left: 26px;
-      margin-bottom: 16px;
+    /* About & Contact */
+    .info-box {
+      background-color: var(--bg-card);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      border-radius: 10px;
+      padding: 2rem;
       color: var(--text-muted);
     }
 
-    .benefits-list li strong {
-      color: #ffffff;
+    .info-box p {
+      margin-bottom: 1rem;
     }
 
-    .benefits-list li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
+    .info-box strong {
+      color: var(--text-light);
+    }
+
+    .info-box a {
       color: var(--gold);
-      font-weight: bold;
-    }
-
-    /* Contact & Form */
-    .contact-item {
-      margin-bottom: 16px;
-    }
-
-    .contact-item strong {
-      display: block;
-      color: var(--gold);
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .contact-item a {
-      color: #ffffff;
       text-decoration: none;
     }
 
-    .contact-item a:hover {
-      color: var(--gold);
-      text-decoration: underline;
-    }
-
-    .form-group {
-      margin-bottom: 15px;
-    }
-
-    .form-group label {
-      display: block;
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--gold-light);
-      margin-bottom: 6px;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 12px;
-      border-radius: 8px;
-      border: 1px solid var(--border-subtle);
-      background-color: var(--navy-dark);
-      color: #ffffff;
-      font-size: 0.95rem;
-      font-family: inherit;
-    }
-
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: var(--gold);
-    }
-
-    .btn-submit {
-      width: 100%;
-      padding: 14px;
-      background-color: var(--gold);
-      color: var(--navy-dark);
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    .btn-submit:hover {
-      background-color: var(--gold-light);
-    }
-
-    /* Footer */
     footer {
-      background-color: #040a16;
-      border-top: 1px solid var(--border-subtle);
       text-align: center;
+      padding: 2rem 1rem;
+      border-top: 1px solid rgba(212, 175, 55, 0.2);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="#" class="logo">Samtech Nexus Limited</a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#accessories">Accessories</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>SAMTECH NEXUS LIMITED</h1>
+    <p>Your trusted hub for graphic design, online government &amp; travel applications, web development, and modern smart devices.</p>
+    <a href="https://wa.me." target="_blank" rel="noopener noreferrer" class="btn">Chat on WhatsApp</a>
+    <a href="#services" class="btn btn-outline">Explore Services</a>
+  </div>
+
+  <!-- Our Services -->
+  <section id="services">
+    <div class="section-header">
+      <h2>Our Services</h2>
+      <p>Fast, reliable digital design, documentation, and web solutions</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <span>01</span>
+        <h3>Flyer Designing</h3>
+        <p>Eye-catching promotional flyers tailored for businesses, events, and campaigns.</p>
+      </div>
+
+      <div class="card">
+        <span>02</span>
+        <h3>Poster Designing</h3>
+        <p>High-resolution digital and print-ready posters that capture attention.</p>
+      </div>
+
+      <div class="card">
+        <span>03</span>
+        <h3>Invitation Cards</h3>
+        <p>Custom digital and printable invitations for weddings, graduations, and corporate events.</p>
+      </div>
+
+      <div class="card">
+        <span>04</span>
+        <h3>Business Cards</h3>
+        <p>Professional, modern business card designs to elevate your brand identity.</p>
+      </div>
+
+      <div class="card">
+        <span>05</span>
+        <h3>Green Card Application</h3>
+        <p>Guided, accurate assistance with your Diversity Visa (Green Card) entry.</p>
+      </div>
+
+      <div class="card">
+        <span>06</span>
+        <h3>Passport Application</h3>
+        <p>Hassle-free online passport application booking and documentation support.</p>
+      </div>
+
+      <div class="card">
+        <span>07</span>
+        <h3>Visa Application</h3>
+        <p>Step-by-step online visa form processing and document preparation.</p>
+      </div>
+
+      <div class="card">
+        <span>08</span>
+        <h3>KRA PIN Services</h3>
+        <p>Quick KRA PIN registration, retrieval, and iTax profile updates.</p>
+      </div>
+
+      <div class="card">
+        <span>09</span>
+        <h3>Portfolio Creation</h3>
+        <p>Standout personal and creative portfolios to showcase your skills and projects.</p>
+      </div>
+
+      <div class="card">
+        <span>10</span>
+        <h3>Resume / CV Writing</h3>
+        <p>Clean, modern resumes structured to help you land job interviews.</p>
+      </div>
+
+      <div class="card">
+        <span>11</span>
+        <h3>Editing Services</h3>
+        <p>Professional document, photo, and digital content editing.</p>
+      </div>
+
+      <div class="card">
+        <span>12</span>
+        <h3>Website Developing</h3>
+        <p>Responsive, custom websites built for businesses, startups, and individuals.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech & Accessories -->
+  <section id="accessories">
+    <div class="section-header">
+      <h2>Tech &amp; Accessories</h2>
+      <p>Quality gadgets and electronics available for order</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <span>01</span>
+        <h3>New Model Smartphones</h3>
+        <p>Latest smartphone models with reliable performance and sleek designs.</p>
+      </div>
+
+      <div class="card">
+        <span>02</span>
+        <h3>Laptops</h3>
+        <p>Dependable laptops for business, school, graphic design, and everyday work.</p>
+      </div>
+
+      <div class="card">
+        <span>03</span>
+        <h3>Smart Watches</h3>
+        <p>Modern smartwatches for fitness tracking, notifications, and daily style.</p>
+      </div>
+
+      <div class="card">
+        <span>04</span>
+        <h3>Earpods &amp; Ear Pads</h3>
+        <p>Wireless earpods and comfortable headphones for clear audio on the go.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about">
+    <div class="section-header">
+      <h2>About Samtech Nexus Limited</h2>
+      <p>Bridging Digital Solutions, Essential Services &amp; Modern Tech</p>
+    </div>
+
+    <div class="info-box">
+      <p>Founded by Samuel Kathuri, <strong>Samtech Nexus Limited</strong> is a client-focused digital agency and tech hub built to simplify your personal, academic, and business needs. Located in <strong>Nairobi at Meru House, Room 108</strong>, we serve walk-in clients in the city as well as customers across Kenya through seamless online support.</p>
+      <p>We handle sensitive tasks like KRA iTax compliance, passport bookings, and visa applications with strict confidentiality—while providing standout graphic design, modern websites, and genuine electronics with fast countrywide delivery.</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="section-header">
+      <h2>Contact Us</h2>
+      <p>Reach out for walk-in visits, online services, or countrywide gadget orders</p>
+    </div>
+
+    <div class="info-box">
+      <p><strong>Location:</strong> Meru House, Room 108, Nairobi, Kenya (Online Services &amp; Countrywide Delivery Available)</p>
+      <p><strong>Phone / WhatsApp:</strong> <a href="tel:+254789260321">0789 260 321</a></p>
+      <p><strong>Email:</strong> <a href="mailto:infosamtech@gmail.com">infosamtech@gmail.com</a></p>
+      <br />
+      <a href="https://wa.me." target="_blank" rel="noopener noreferrer" class="btn">Chat on WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Samtech Nexus Limited. All Rights Reserved. | Meru House, Room 108, Nairobi.</p>
+  </footer>
+
+</body>
+</html>
